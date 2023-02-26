@@ -8,7 +8,7 @@ This repository contains code for a walkthrough of a simple computational pipeli
 In order to get started you'll need to have the following installed:
 
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#installation)
+* [Nextflow](https://github.com/amnahsiddiqa/NGS_Pipelines/wiki/Install-and-Check-NEXTFLOW)
 * [Docker](https://docs.docker.com/install/) (if running on MacOSX [Docker For Mac](https://www.docker.com/docker-mac) is recommended)
 
 
