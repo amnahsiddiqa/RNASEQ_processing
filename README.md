@@ -10,9 +10,9 @@ In order to get started you'll need to have the following installed:
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#installation)
 * [Docker](https://docs.docker.com/install/) (if running on MacOSX [Docker For Mac](https://www.docker.com/docker-mac) is recommended)
-* Notes in  Wiki for more details on installations etc ; 
+
 
 
 
 ## NOTES:
-Documentation WIKI: here 
+* Documentation WIKI for more details on installations etc ; 
