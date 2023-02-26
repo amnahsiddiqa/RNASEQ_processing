@@ -1,4 +1,4 @@
-# Minimal RNASEQ_Pipeline with Docker, Nextflow, and AWS Batch
+# Minimal RNASEQ_Pipeline with Nextflow Docker/Singularity or BASH 
 
 ## About
 This repository contains code for a walkthrough of a simple computational pipeline for RNAseq using [Nextflow](https://www.nextflow.io/), [Docker](https://www.docker.com/) and/or BASH)
