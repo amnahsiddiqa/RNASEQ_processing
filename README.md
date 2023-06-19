@@ -26,6 +26,45 @@ To get started with the Nextflow version of the pipeline, make sure you have the
 * [Docker](https://docs.docker.com/install/) (Recommended for MacOSX users; use Docker For Mac  [Docker For Mac](https://www.docker.com/docker-mac))
 
 
+## Getting started 
+### create a sample metadata file
+This is same as nf-core RNAseq sample file. Must have four columns;
+- sample  < Sample name can be anuY IDentifioer of users own input criteria ; this is not going to me merged for example as in for sequencing depeth etc ; Thats not gona happen here >
+- fastq_1  < Path to read1.fastq file >
+- fastq_2 < Path to read2.fastq file>
+- strandedness <reverse, forward, auto >
+
+
+### create directory structure like this:
+── new_workflow/                    <- Working directory for analysis
+  │   └── annotation/               <- Genome annotation file (.GTF/.GFF)
+  │  
+  │   └── genome/                   <- Host genome file (.FASTA)
+  │  
+  │   └── input/                    <- Location of input  RNAseq data
+  │  
+  │   └── output/                   <- Data generated during processing steps
+  │       ├── 1_initial_qc/         <- Main alignment files for each sample
+  │       ├── 2_trimmed_output/     <-  Log from running STAR alignment step
+  │       ├── 3_rRNA/               <- STAR alignment counts output (for comparison with featureCounts)
+  │       ├── 4_final_counts/       <- Summarized gene counts across all samples
+  │       ├── 5_multiQC/            <- Overall report of logs for each step
+  │   └── star_index/               <-  Folder to store the indexed genome files from STAR/STAR-RSEM
+
+### Arguments for config file 
+## Create config file to pass the argumnets yaml file ? or just run a shell file ;
+Example use:
+    RNAseq_workflow.sh -g <109> <-p> -i <path_of_inputs> -d <analyses directory name> -o <path_of_outputs> -t <threads>
+    
+Options:
+    -g    set version of human reference genome, default is HG38 version 108 ; newer version can be passed here e.g. 109 
+    -p    default is  for paired-end data, (include for single-end data; to do)
+    -a    sjdboverhang for STAR ; 
+    -i    path to directory of input fastq or fastq.gz files
+    -m    metadata csv file in the described way; must have four columns 
+    -d    directory name for output files, It will be created in current working dirtecrtory 
+    -t    average number of threads for each sample, must be integer, default is 1
+" 
 
 
 ## NOTES:
