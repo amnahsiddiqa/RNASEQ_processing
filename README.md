@@ -27,7 +27,7 @@ To get started with the Nextflow version of the pipeline, make sure you have the
 
 
 ## Getting started 
-### create a sample metadata file
+### Create a sample metadata file
 This is same as nf-core RNAseq sample file. Must have four columns;
 - sample  < Sample name can be anuY IDentifioer of users own input criteria ; this is not going to me merged for example as in for sequencing depeth etc ; Thats not gona happen here >
 - fastq_1  < Path to read1.fastq file >
@@ -35,7 +35,8 @@ This is same as nf-core RNAseq sample file. Must have four columns;
 - strandedness <reverse, forward, auto >
 
 
-### create directory structure like this:
+### Create directory structure like this:
+```
 ── new_workflow/                    <- Working directory for analysis
   │   └── annotation/               <- Genome annotation file (.GTF/.GFF)
   │  
@@ -50,12 +51,12 @@ This is same as nf-core RNAseq sample file. Must have four columns;
   │       ├── 4_final_counts/       <- Summarized gene counts across all samples
   │       ├── 5_multiQC/            <- Overall report of logs for each step
   │   └── star_index/               <-  Folder to store the indexed genome files from STAR/STAR-RSEM
-
+```
 ### Arguments for config file 
-## Create config file to pass the argumnets yaml file ? or just run a shell file ;
 Example use:
-    RNAseq_workflow.sh -g <109> <-p> -i <path_of_inputs> -d <analyses directory name> -o <path_of_outputs> -t <threads>
-    
+   
+    > RNAseq_workflow.sh -g <109> <-p> -i <path_of_inputs> -d <analyses directory name> -o <path_of_outputs> -t <threads>
+ ```   
 Options:
     -g    set version of human reference genome, default is HG38 version 108 ; newer version can be passed here e.g. 109 
     -p    default is  for paired-end data, (include for single-end data; to do)
@@ -64,8 +65,7 @@ Options:
     -m    metadata csv file in the described way; must have four columns 
     -d    directory name for output files, It will be created in current working dirtecrtory 
     -t    average number of threads for each sample, must be integer, default is 1
-" 
-
+```
 
 ## NOTES:
 - For more detailed information, please refer to the documentation available in the repository's wiki.
