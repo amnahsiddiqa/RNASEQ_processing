@@ -1,0 +1,3 @@
+FROM continuumio/miniconda3:4.5.12
+
+RUN conda install -y -c bioconda trim-galore cutadapt fastqc multiqc star rsem

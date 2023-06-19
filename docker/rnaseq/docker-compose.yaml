@@ -1,0 +1,11 @@
+version: '1:06-6-2023'
+services:
+  fastqc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ~:/data
+    environment:
+      - MAINTAINER_NAME=Amnah Siddiqa
+      - MAINTAINER_EMAIL=amnahsiddiqa@gmail.com
