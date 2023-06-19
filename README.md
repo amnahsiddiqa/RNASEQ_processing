@@ -1,4 +1,6 @@
 ## Minimal RNASEQ Workflow with BASH/Nextflow 
+![RNASEQ_AS](https://github.com/amnahsiddiqa/RNASEQ_processing/assets/28387956/79951381-598a-4f94-abe4-702981bdb106)
+
 ## About
 This repository contains code for a computational workflow for RNA-Seq data preprocessing and data analysis using:
 - Bash (for HPC environments; my earlier scripts)
@@ -29,3 +31,6 @@ To get started with the Nextflow version of the pipeline, make sure you have the
 ## NOTES:
 - For more detailed information, please refer to the documentation available in the repository's wiki.
 - Under development 
+
+
+
