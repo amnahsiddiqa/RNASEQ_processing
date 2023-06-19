@@ -70,6 +70,6 @@ Options:
 ## NOTES:
 - For more detailed information, please refer to the documentation available in the repository's wiki.
 - Under development 
-
+- https://github.com/ewels/AWS-iGenomes (If needed indexed genomes to download)
 
 
