@@ -28,4 +28,5 @@ To get started with the Nextflow version of the pipeline, make sure you have the
 
 
 ## NOTES:
-For more detailed information, please refer to the documentation available in the repository's wiki.
+- For more detailed information, please refer to the documentation available in the repository's wiki.
+- Under development 
