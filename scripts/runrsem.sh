@@ -15,7 +15,8 @@ genomedir=$1
 I_PATH=$2
 output_dir=$3
 csv_file=$4
-head -n 1 "$csv_file" > /dev/null
+#head -n 1 "$csv_file" > /dev/null; leave it as is chpped head already 
+read -r _  # Discard the first line (header)
 while IFS=', ' read -r sample fastq_1 fastq_2 strandedness || [ -n "$sample" ]; do
     subfolder=$(echo "$sample" | rev | cut -d '/' -f1 | rev)
     i=$sample
@@ -29,7 +30,7 @@ while IFS=', ' read -r sample fastq_1 fastq_2 strandedness || [ -n "$sample" ]; 
         
         echo "$I_PATH/$pairedend1"
         echo "$I_PATH/$pairedend2"
-        chmod -R +rwx  output_dir
+        chmod -R +rwx  $output_dir
         STAR --runThreadN 32 \
             --genomeDir $genomedir/ \
             --readFilesIn $I_PATH/$pairedend1 $I_PATH/$pairedend2 \
@@ -42,7 +43,7 @@ while IFS=', ' read -r sample fastq_1 fastq_2 strandedness || [ -n "$sample" ]; 
             --runMode alignReads \
             --outFileNamePrefix $output_dir/${i}_
         echo "Alignment for ${i} is done."
-        chmod -R +rwx  output_dir
+        chmod -R +rwx  $output_dir
         echo "Calculating gene expression for ${i}..."
         rsem-calculate-expression --bam \
             --no-bam-output \
@@ -51,8 +52,8 @@ while IFS=', ' read -r sample fastq_1 fastq_2 strandedness || [ -n "$sample" ]; 
             --strandedness reverse \
             --alignments \
             -p 32 \
-            $output_dir/${i}_Aligned.toTranscriptome.out.bam \
-            $genomedir \
+            $output_dir/${i}_Aligned.toTranscriptome.out.bam\
+            $genomedir/RsemGenomeIndex \
             $output_dir/${i}
         echo "Gene expression calculation for ${i} is done."
     }
