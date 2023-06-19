@@ -1,0 +1,3 @@
+sample,fastq_1,fastq_2,strandedness
+90005_day0_NR,/projects/sh-li-lab/share/SiddiqaA/play_shworkflow/data/90005_day0_NR_2_C2_GT23-07012_TATCGCAC-ACACTAAG_S38_L001_R1_001.fastq.gz,/projects/sh-li-lab/share/SiddiqaA/play_shworkflow/data/90005_day0_NR_2_C2_GT23-07012_TATCGCAC-ACACTAAG_S38_L001_R2_001.fastq.gz,auto
+90005_day7_NR,/projects/sh-li-lab/share/SiddiqaA/play_shworkflow/data/90005_day7_NR_2_C1_GT23-07026_TGGATCGA-TATCGCAC_S52_L002_R1_001.fastq.gz,/projects/sh-li-lab/share/SiddiqaA/play_shworkflow/data/90005_day7_NR_2_C1_GT23-07026_TGGATCGA-TATCGCAC_S52_L002_R2_001.fastq.gz,auto
