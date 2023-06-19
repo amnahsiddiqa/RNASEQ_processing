@@ -14,7 +14,7 @@ Docker images for the following tools are available on
  - MultiQC 
  - TRIMGALORE
    
- These images can be pulled from amnahsid/rnaseq_analysis. Please note that the combined image is quite large.
+ These images can be pulled from ``` docker pull amnahsid/rnaseq_analysis```. Please note that the combined image is quite large.
 
 ## For Nextflow Version (To be Public yet)
 
