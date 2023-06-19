@@ -72,6 +72,9 @@ In the pipeline, the default and exclusive aligner utilized is STAR, which is em
 ### Quantification Options 
 The pipeline offers multiple options for raw feature counting, including Htseqcount, FeatureCount STAR quant mode, and RSEM. However, RSEM is considered the recommended choice due to its superior performance in accurately quantifying gene expression levels. This preference for RSEM over other methods is supported by the studies of Trapnell et al., 2012 and Li and Dewey, 2011, which highlight RSEM as a best practice for RNA-seq data analysis.
 
+### Reference genome files
+Ensemble FASTA and GTF 
+
 ## NOTES:
 - For more detailed information, please refer to the documentation available in the repository's wiki.
 - Under development 
