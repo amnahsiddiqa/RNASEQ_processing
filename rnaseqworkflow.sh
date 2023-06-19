@@ -119,7 +119,7 @@ echo "annotation_file: $annotation_file"
 # above should work if your prereqs/conda is setup 
 # the slurm id of this step is required for next step to schedule the dependency  
 #jobid=$(sbatch --dependency=afterok:$jobid_createstarindex ./scripts/trimgalore.sh samples.csv "$directoryname/output/2_trimmed_output" | awk '{print $4}')
-sbatch ./scripts/trimgalore.sh samples.csv "$directoryname/output/2_trimmed_output" 
+#sbatch ./scripts/trimgalore.sh samples.csv "$directoryname/output/2_trimmed_output" 
 
 
 

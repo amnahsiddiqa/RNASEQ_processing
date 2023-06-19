@@ -51,8 +51,8 @@ while IFS=', ' read -r sample fastq_1 fastq_2 strandedness || [ -n "$sample" ]; 
             --strandedness reverse \
             --alignments \
             -p 32 \
-            $output_dir/${i}_Aligned.toTranscriptome.out.bam\
-            /projects/sh-li-lab/share/SiddiqaA/R01_preprocessing_Sep2021/PBMC_RNASEQ/RSEM_referencev2/ref \
+            $output_dir/${i}_Aligned.toTranscriptome.out.bam \
+            $genomedir \
             $output_dir/${i}
         echo "Gene expression calculation for ${i} is done."
     }

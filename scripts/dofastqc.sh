@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=TRPb1
+#SBATCH --job-name=fastqc
 #SBATCH --mail-type=END
 #SBATCH -p compute
 #SBATCH -q batch
