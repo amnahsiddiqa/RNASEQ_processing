@@ -8,7 +8,7 @@ This repository contains code for a computational workflow for RNA-Seq data prep
 Both implementations make use of containerized environments using Docker or Singularity.
 
 ## Docker/Singularity Images
-Docker images for the following tools are available on 
+Docker images for the following tools are available [@dockerhub](https://hub.docker.com/u/amnahsid)
  - STAR-RSEM 
  - FASTQC
  - MultiQC 
