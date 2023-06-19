@@ -124,7 +124,7 @@ echo "annotation_file: $annotation_file"
 
 
 # create a  new list of trimmed filenames to pass through 
-#awk -F',' 'NR>1 { cmd1 = "basename \"" $2 "\""; cmd2 = "basename \"" $3 "\""; cmd1 | getline result1; cmd2 | getline result2; close(cmd1); close(cmd2); $2 = result1; $3 = result2; sub(/\.fastq\.gz$/, "_val_1.fq.gz", $2); sub(/\.fastq\.gz$/, "_val_2.fq.gz", $3); print }' your_file.csv > samples_trimmed.csv
+#awk -F',' 'NR==1 || NR>1 { cmd1 = "basename \"" $2 "\""; cmd2 = "basename \"" $3 "\""; cmd1 | getline result1; cmd2 | getline result2; close(cmd1); close(cmd2); $2 = result1; $3 = result2; sub(/\.fastq\.gz$/, "_val_1.fq.gz", $2); sub(/\.fastq\.gz$/, "_val_2.fq.gz", $3); print }' samples.csv > samples_trimmed.csv
 
 #Quantification Rsem
 #add if lese statement and debug 
