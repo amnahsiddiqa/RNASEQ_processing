@@ -1,5 +1,4 @@
-## Minimal RNASEQ Workflow with BASH/Nextflow with Docker/Singularity
-
+## Minimal RNASEQ Workflow with BASH/Nextflow 
 ## About
 This repository contains code for a computational workflow for RNA-Seq data preprocessing and data analysis using:
 - Bash (for HPC environments; my earlier scripts)
