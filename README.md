@@ -45,11 +45,11 @@ This is same as nf-core RNAseq sample file. Must have four columns;
   │   └── input/                    <- Location of input  RNAseq data
   │  
   │   └── output/                   <- Data generated during processing steps
-  │       ├── 1_initial_qc/         <- Main alignment files for each sample
+  │       ├── 1_initial_qc/         <- quality control (FASTQC)
   │       ├── 2_trimmed_output/     <-  Log from running STAR alignment step
-  │       ├── 3_rRNA/               <- STAR alignment counts output (for comparison with featureCounts)
+  │       ├── 3_aligned_sequences/  <- Main alignment files for each sample (using STAR)
   │       ├── 4_final_counts/       <- Summarized gene counts across all samples
-  │       ├── 5_multiQC/            <- Overall report of logs for each step
+  │       ├── 5_multiQC/            <- Overall report of logs/QC for each step
   │   └── star_index/               <-  Folder to store the indexed genome files from STAR/STAR-RSEM
 ```
 ### Arguments for config file 
@@ -78,6 +78,6 @@ Ensemble FASTA and GTF
 ## NOTES:
 - For more detailed information, please refer to the documentation available in the repository's wiki.
 - Under development 
-- https://github.com/ewels/AWS-iGenomes (If needed indexed genomes to download)
+- [If needed indexed genomes to download](https://github.com/ewels/AWS-iGenomes)
 
 
